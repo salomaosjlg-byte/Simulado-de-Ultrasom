@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulado de Ultrassom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Pré-vestibular</p>
+          <h1>Simulado de Ultrassom</h1>
+        </div>
+        <button id="restart-btn" class="ghost-btn">Reiniciar</button>
+      </header>
+
+      <main class="card">
+        <section class="intro" id="intro-panel">
+          <div class="badge">Avaliação rápida</div>
+          <h2>Prepare-se para o exame</h2>
+          <p>
+            Teste seus conhecimentos em anatomia, técnica e interpretação de
+            exames de ultrassonografia. O simulado inclui tempo por questão e
+            feedback ao final.
+          </p>
+
+          <div class="meta-grid">
+            <div>
+              <span>Questões</span>
+              <strong>10</strong>
+            </div>
+            <div>
+              <span>Tempo</span>
+              <strong>30s</strong>
+            </div>
+            <div>
+              <span>Nível</span>
+              <strong>Clínico</strong>
+            </div>
+          </div>
+
+          <button id="start-btn" class="primary-btn">Iniciar simulado</button>
+        </section>
+
+        <section class="quiz hidden" id="quiz-panel">
+          <div class="quiz-topline">
+            <div class="progress-wrap">
+              <span id="progress-label">Questão 1 de 10</span>
+              <div class="progress-bar">
+                <div id="progress-fill"></div>
+              </div>
+            </div>
+            <div class="timer-box">
+              <span>Tempo</span>
+              <strong id="timer">30</strong>
+            </div>
+          </div>
+
+          <div class="question-block">
+            <p id="question-category" class="category-tag">Ultrassonografia</p>
+            <h2 id="question-text">Pergunta</h2>
+          </div>
+
+          <div id="answers" class="answers" aria-live="polite"></div>
+
+          <div id="feedback" class="feedback hidden"></div>
+
+          <div class="actions">
+            <button id="next-btn" class="primary-btn hidden">Próxima</button>
+          </div>
+        </section>
+
+        <section class="results hidden" id="results-panel">
+          <div class="result-badge" id="result-badge">Resultado</div>
+          <h2 id="result-title">Seu desempenho</h2>
+          <div class="score-ring">
+            <div>
+              <span id="score-value">0%</span>
+              <small>acertos</small>
+            </div>
+          </div>
+
+          <div class="result-stats">
+            <div>
+              <span>Acertos</span>
+              <strong id="correct-count">0</strong>
+            </div>
+            <div>
+              <span>Erros</span>
+              <strong id="wrong-count">0</strong>
+            </div>
+            <div>
+              <span>Questões</span>
+              <strong id="total-questions">10</strong>
+            </div>
+          </div>
+
+          <p id="result-message" class="result-message">
+            Continue estudando e revise os pontos que tiveram mais dúvidas.
+          </p>
+
+          <button id="try-again-btn" class="primary-btn">Tentar novamente</button>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
